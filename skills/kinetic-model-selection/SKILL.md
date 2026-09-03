@@ -37,14 +37,19 @@ curl -s -X POST "https://swarmlabs.tools/api/v3/fit" \
   -H "Content-Type: application/json" \
   -d '{
     "data": [[0,0.10],[2,0.21],[4,0.48],[6,0.79],[8,0.90],[10,0.93]],
-    "models": ["logistic", "monod", "baranyi"]
+    "models": ["logistic", "monod"]
   }'
 ```
 
 > **Payload contract (verified 2026-09-02).** The field is `data`, a list of
 > `[time, OD600]` pairs — **not** separate `x` / `y` arrays. At least 4 points.
-> `models` is optional; omit it to fit everything supported. Sending
-> `{"x": ..., "y": ...}` returns
+> `models` is optional; omit it to fit the two models the endpoint currently
+> supports: `logistic` and `monod`. **The endpoint silently ignores any other
+> name** (e.g. `baranyi`, `andrews`, `haldane`) — it does not error, it just
+> omits them from `results`. The broader model library (Andrews, Haldane,
+> Contois, Baranyi, Tessier, Pirt, …) is covered by the 52 microbiology
+> scenarios' ground-truth evaluators and the local Python engine, not by `/fit`.
+> Sending `{"x": ..., "y": ...}` returns
 > `{"error": "Need >= 4 data points [[time, OD600]]"}`.
 
 Verified response:
