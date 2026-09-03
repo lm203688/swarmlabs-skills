@@ -107,13 +107,17 @@ curl -s -X POST "https://swarmlabs.tools/api/v3/fit" \
   -H "Content-Type: application/json" \
   -d '{
     "data": [[0,0.10],[2,0.21],[4,0.48],[6,0.79],[8,0.90],[10,0.93]],
-    "models": ["logistic", "monod", "baranyi"]
+    "models": ["logistic", "monod"]
   }'
 ```
 
-> **Payload contract (verified against live API 2026-09-02).** The field is `data`,
+> **Payload contract (verified against live API 2026-09-02).** The `/fit` endpoint
+> currently fits only `logistic` and `monod` — any other model name in `models`
+> is silently ignored (it does not error, it just omits it from `results`). The
+> wider model library (Andrews, Haldane, Contois, Baranyi, …) lives in the 52
+> microbiology scenarios' ground-truth evaluators, not in `/fit`. The field is `data`,
 > a list of `[time, OD600]` pairs — **not** separate `x` / `y` arrays. Minimum 4
-> points. `models` is optional; omit it to get every supported model. Passing
+> points. `models` is optional; omit it to fit both supported models. Passing
 > `{"x": [...], "y": [...]}` returns
 > `{"error": "Need >= 4 data points [[time, OD600]]"}`.
 
@@ -149,13 +153,13 @@ User has 5 data points for E. coli growth rate vs glucose, wants the next run.
 3. `POST /guard` on the top 10 candidates
 4. Report: top 3 `pass` conditions with mean ± 1.96·std, and note any `controlled` candidates worth a real run
 
-### Example 2 — "Does my data follow Monod or Andrews?`
+### Example 2 — "Does my data follow Monod or Andrews?"
 
 Andrews adds substrate inhibition — growth drops at high substrate. If the user's data peaks then declines, Monod will fit poorly.
 
-1. `POST /fit` with `["monod", "andrews", "haldane"]`
-2. Compare R² and report the winner
-3. If Andrews wins, say inhibition is present and name the estimated inhibition constant
+1. `POST /fit` with `["monod"]` to get a Monod R² baseline (the endpoint only fits `logistic`+`monod`).
+2. For the Andrews/Haldane comparison, do **not** use `/fit` (it ignores those names). Instead compare the user's data against the microbiology scenarios' ground-truth evaluators: `POST /predict` on `micro_mle_ecoli_monod` and `micro_haldane_putida` (or `/sample` them with the user's substrate range), then judge which ground truth reproduces the user's curve.
+3. Report the winner with R² and, if Andrews/Haldane wins, name the estimated inhibition constant from the scenario's published formula.
 
 ### Example 3 — "Can I trust a prediction at 8 g/L when I only tested up to 2?"
 
