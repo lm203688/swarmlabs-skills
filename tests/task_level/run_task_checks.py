@@ -534,7 +534,10 @@ def main() -> int:
         print()
         print("  These checks give each skill a task with a known answer.")
         print("  A skill that only reads well cannot pass them.")
-    return 0 if passed == len(results) else 1
+    # Skipped checks are not failures: counting them in the denominator would
+    # make an offline runner permanently red.
+    failed = len(results) - passed - skipped
+    return 0 if failed == 0 else 1
 
 
 if __name__ == "__main__":
