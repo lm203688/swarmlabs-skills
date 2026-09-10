@@ -1,0 +1,1305 @@
+{
+ "source": "SwarmLabs strain registry (offline extract)",
+ "count": 69,
+ "strains": [
+  {
+   "strain_id": "ecoli_K12_MG1655",
+   "genus": "Escherichia",
+   "species": "coli",
+   "common_name": "大肠杆菌",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.81,
+   "Ks": 0.004,
+   "Yxs": 0.5,
+   "T_opt": 37.0,
+   "p_opt": 7.0,
+   "aerobic": true,
+   "anaerobic_flexible": true,
+   "media": [
+    "LB",
+    "M9_minimal",
+    "TB_terrific"
+   ]
+  },
+  {
+   "strain_id": "scerevisiae_ATCC26010",
+   "genus": "Saccharomyces",
+   "species": "cerevisiae",
+   "common_name": "酿酒酵母",
+   "domain": "Eukarya",
+   "substrate": "glucose",
+   "mu_max": 0.42,
+   "Ks": 0.025,
+   "Yxs": 0.1,
+   "T_opt": 30.0,
+   "p_opt": 5.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "YPD",
+    "SD_complete",
+    "BYPG"
+   ]
+  },
+  {
+   "strain_id": "pputida_MT2",
+   "genus": "Pseudomonas",
+   "species": "putida",
+   "common_name": "恶臭假单胞菌",
+   "domain": "Bacteria",
+   "substrate": "toluene",
+   "mu_max": 0.35,
+   "Ks": 0.02,
+   "Yxs": 0.4,
+   "T_opt": 30.0,
+   "p_opt": 7.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "TB_soy",
+    "M9_minimal"
+   ]
+  },
+  {
+   "strain_id": "llactis_NZ9000",
+   "genus": "Lactococcus",
+   "species": "lactis",
+   "common_name": "乳酸乳球菌",
+   "domain": "Bacteria",
+   "substrate": "lactose",
+   "mu_max": 0.55,
+   "Ks": 0.3,
+   "Yxs": 0.08,
+   "T_opt": 30.0,
+   "p_opt": 6.5,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "MRS_broth",
+    "GAM_broth",
+    "SMP_culture"
+   ]
+  },
+  {
+   "strain_id": "acalcoaceticus_ATCC15668",
+   "genus": "Acetobacter",
+   "species": "calcoaceticus",
+   "common_name": "产醋醋酸杆菌",
+   "domain": "Bacteria",
+   "substrate": "acetate",
+   "mu_max": 0.78,
+   "Ks": 0.03,
+   "Yxs": 0.25,
+   "T_opt": 30.0,
+   "p_opt": 6.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "Hestrin_Schroeder",
+    "Acetobacter_broth"
+   ]
+  },
+  {
+   "strain_id": "mtrichosporium_OB3b",
+   "genus": "Methylosinus",
+   "species": "trichosporium",
+   "common_name": "甲烷八叠球菌",
+   "domain": "Archaea",
+   "substrate": "methane",
+   "mu_max": 0.08,
+   "Ks": 0.02,
+   "Yxs": 0.08,
+   "T_opt": 30.0,
+   "p_opt": 7.0,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "Methanobacterium_broth",
+    "MSB_1"
+   ]
+  },
+  {
+   "strain_id": "ecoli_B121_BL21",
+   "genus": "Escherichia",
+   "species": "coli",
+   "common_name": "大肠杆菌 BL21(DE3)",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.81,
+   "Ks": 0.004,
+   "Yxs": 0.5,
+   "T_opt": 37.0,
+   "p_opt": 7.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "LB",
+    "TB_terrific",
+    "Auto_induction_Zhu"
+   ]
+  },
+  {
+   "strain_id": "blichensteinii_ATCC19420",
+   "genus": "Bacillus",
+   "species": "licheniformis",
+   "common_name": "解淀粉芽孢杆菌",
+   "domain": "Bacteria",
+   "substrate": "starch",
+   "mu_max": 0.62,
+   "Ks": 0.5,
+   "Yxs": 0.4,
+   "T_opt": 30.0,
+   "p_opt": 7.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "Nutrient_broth",
+    "Starch_medium"
+   ]
+  },
+  {
+   "strain_id": "cpastoris_GS115",
+   "genus": "Pichia",
+   "species": "pastoris",
+   "common_name": "巴斯德毕赤酵母",
+   "domain": "Eukarya",
+   "substrate": "glycerol",
+   "mu_max": 0.58,
+   "Ks": 0.1,
+   "Yxs": 0.12,
+   "T_opt": 30.0,
+   "p_opt": 5.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "BMGY",
+    "BMMY",
+    "GPI_medium"
+   ]
+  },
+  {
+   "strain_id": "lactobacillus_plantarum_148",
+   "genus": "Lactobacillus",
+   "species": "plantarum",
+   "common_name": "植物乳杆菌",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.65,
+   "Ks": 0.02,
+   "Yxs": 0.15,
+   "T_opt": 37.0,
+   "p_opt": 6.0,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "MRS_broth",
+    "De Man_rogoza_sharpe"
+   ]
+  },
+  {
+   "strain_id": "clostridium_acetobutylicum_ATCC824",
+   "genus": "Clostridium",
+   "species": "acetobutylicum",
+   "common_name": "丙酮丁醇梭菌",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.28,
+   "Ks": 0.05,
+   "Yxs": 0.1,
+   "T_opt": 37.0,
+   "p_opt": 5.5,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "Weimberg_medium",
+    "Wolfe_medium"
+   ]
+  },
+  {
+   "strain_id": "rhizobium_leguminosarum_biovar",
+   "genus": "Rhizobium",
+   "species": "leguminosarum",
+   "common_name": "根瘤菌",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.25,
+   "Ks": 0.1,
+   "Yxs": 0.4,
+   "T_opt": 28.0,
+   "p_opt": 7.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "TY_broth",
+    "Nitrogen_free_medium"
+   ]
+  },
+  {
+   "strain_id": "streptomyces_coelicolor_A3",
+   "genus": "Streptomyces",
+   "species": "coelicolor",
+   "common_name": "天蓝色链霉菌",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.15,
+   "Ks": 0.02,
+   "Yxs": 0.2,
+   "T_opt": 30.0,
+   "p_opt": 7.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "MS_medium",
+    "Streptomyces_Broth"
+   ]
+  },
+  {
+   "strain_id": "halobacterium_salinarum_NRC1",
+   "genus": "Halobacterium",
+   "species": "salinarum",
+   "common_name": "盐生盐杆菌",
+   "domain": "Archaea",
+   "substrate": "peptone",
+   "mu_max": 0.35,
+   "Ks": 0.5,
+   "Yxs": 0.2,
+   "T_opt": 42.0,
+   "p_opt": 6.8,
+   "aerobic": null,
+   "anaerobic_flexible": true,
+   "media": [
+    "SH_buffer",
+    "High_salt_medium"
+   ]
+  },
+  {
+   "strain_id": "thermus_aquaticus_YT1",
+   "genus": "Thermus",
+   "species": "aquaticus",
+   "common_name": "水热菌",
+   "domain": "Bacteria",
+   "substrate": "peptone",
+   "mu_max": 0.5,
+   "Ks": 0.1,
+   "Yxs": 0.2,
+   "T_opt": 70.0,
+   "p_opt": 7.5,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "TSB_thermophile",
+    "Yeast_extract"
+   ]
+  },
+  {
+   "strain_id": "synechococcus_elongatus_BP1",
+   "genus": "Synechococcus",
+   "species": "elongatus",
+   "common_name": "鱼腥藻",
+   "domain": "Bacteria",
+   "substrate": "CO2_photosynthesis",
+   "mu_max": 0.05,
+   "Ks": 0.01,
+   "Yxs": 0.1,
+   "T_opt": 25.0,
+   "p_opt": 7.5,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "BG11_medium",
+    "Z80_medium"
+   ]
+  },
+  {
+   "strain_id": "zmobilis_ZM4",
+   "genus": "Zymomonas",
+   "species": "mobilis",
+   "common_name": "运动发酵单胞菌",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 1.2,
+   "Ks": 0.02,
+   "Yxs": 0.05,
+   "T_opt": 30.0,
+   "p_opt": 6.0,
+   "aerobic": null,
+   "anaerobic_flexible": true,
+   "media": [
+    "Zymomonas_broth",
+    "MRS_mod"
+   ]
+  },
+  {
+   "strain_id": "cglutamicum_RUT212",
+   "genus": "Corynebacterium",
+   "species": "glutamicum",
+   "common_name": "谷氨酸棒杆菌",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.72,
+   "Ks": 0.02,
+   "Yxs": 0.4,
+   "T_opt": 32.0,
+   "p_opt": 7.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "CGM_broth",
+    "Corynebacterium_medium"
+   ]
+  },
+  {
+   "strain_id": "bfermentans_ATCC19078",
+   "genus": "Butyrivibrio",
+   "species": "fibrisolvens",
+   "common_name": "纤维分解梭杆菌",
+   "domain": "Bacteria",
+   "substrate": "cellulose",
+   "mu_max": 0.15,
+   "Ks": 0.1,
+   "Yxs": 0.15,
+   "T_opt": 39.0,
+   "p_opt": 6.8,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "Ruminococcus_medium",
+    "Anox_mat"
+   ]
+  },
+  {
+   "strain_id": "nthermophilus_PK",
+   "genus": "Neurospora",
+   "species": "thermophila",
+   "common_name": "热嗜神经孢子菌",
+   "domain": "Bacteria",
+   "substrate": "sucrose",
+   "mu_max": 0.12,
+   "Ks": 0.05,
+   "Yxs": 0.06,
+   "T_opt": 53.0,
+   "p_opt": 6.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "Neurospora_medium",
+    "Vogel_medium"
+   ]
+  },
+  {
+   "strain_id": "eudoraea_sp_17_1",
+   "genus": "Eudoraea",
+   "species": "sp.",
+   "common_name": "嗜热固氮菌",
+   "domain": "Bacteria",
+   "substrate": "CO2_N2",
+   "mu_max": 0.08,
+   "Ks": 0.01,
+   "Yxs": 0.1,
+   "T_opt": 55.0,
+   "p_opt": 7.0,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "Anox_mat",
+    "Nitrogen_free"
+   ]
+  },
+  {
+   "strain_id": "ecoli_K12_DH5alpha",
+   "genus": "Escherichia",
+   "species": "coli",
+   "common_name": "大肠杆菌 DH5α",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.81,
+   "Ks": 0.004,
+   "Yxs": 0.5,
+   "T_opt": 37.0,
+   "p_opt": 7.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "LB",
+    "SOC"
+   ]
+  },
+  {
+   "strain_id": "ecoli_K12_TOP10",
+   "genus": "Escherichia",
+   "species": "coli",
+   "common_name": "大肠杆菌 TOP10",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.81,
+   "Ks": 0.004,
+   "Yxs": 0.5,
+   "T_opt": 37.0,
+   "p_opt": 7.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "LB",
+    "SOC"
+   ]
+  },
+  {
+   "strain_id": "ecoli_K12_W3110",
+   "genus": "Escherichia",
+   "species": "coli",
+   "common_name": "大肠杆菌 W3110",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.81,
+   "Ks": 0.004,
+   "Yxs": 0.5,
+   "T_opt": 37.0,
+   "p_opt": 7.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "LB",
+    "M9_minimal"
+   ]
+  },
+  {
+   "strain_id": "ecoli_B121_ROS2",
+   "genus": "Escherichia",
+   "species": "coli",
+   "common_name": "大肠杆菌 Rosetta 2",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.81,
+   "Ks": 0.004,
+   "Yxs": 0.5,
+   "T_opt": 37.0,
+   "p_opt": 7.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "LB",
+    "TB_terrific"
+   ]
+  },
+  {
+   "strain_id": "scerevisiae_S288c_BY4741",
+   "genus": "Saccharomyces",
+   "species": "cerevisiae",
+   "common_name": "酿酒酵母 BY4741",
+   "domain": "Eukarya",
+   "substrate": "glucose",
+   "mu_max": 0.42,
+   "Ks": 0.025,
+   "Yxs": 0.1,
+   "T_opt": 30.0,
+   "p_opt": 5.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "YPD",
+    "SD_complete"
+   ]
+  },
+  {
+   "strain_id": "scerevisiae_CENPK113_7D",
+   "genus": "Saccharomyces",
+   "species": "cerevisiae",
+   "common_name": "酿酒酵母 CEN.PK",
+   "domain": "Eukarya",
+   "substrate": "glucose",
+   "mu_max": 0.44,
+   "Ks": 0.02,
+   "Yxs": 0.09,
+   "T_opt": 30.0,
+   "p_opt": 5.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "YPD",
+    "SD_complete",
+    "CEN_PK_medium"
+   ]
+  },
+  {
+   "strain_id": "scerevisiae_INVSc1",
+   "genus": "Saccharomyces",
+   "species": "cerevisiae",
+   "common_name": "酿酒酵母 INVSc1",
+   "domain": "Eukarya",
+   "substrate": "glucose",
+   "mu_max": 0.42,
+   "Ks": 0.025,
+   "Yxs": 0.1,
+   "T_opt": 30.0,
+   "p_opt": 5.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "YPD",
+    "SD_complete"
+   ]
+  },
+  {
+   "strain_id": "kaerogenes_NCTC4181",
+   "genus": "Klebsiella",
+   "species": "aerogenes",
+   "common_name": "产气克雷伯菌",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.55,
+   "Ks": 0.03,
+   "Yxs": 0.5,
+   "T_opt": 37.0,
+   "p_opt": 7.0,
+   "aerobic": true,
+   "anaerobic_flexible": true,
+   "media": [
+    "LB",
+    "M9_minimal"
+   ]
+  },
+  {
+   "strain_id": "kaerogenes_KCTC2226",
+   "genus": "Klebsiella",
+   "species": "aerogenes",
+   "common_name": "产气克雷伯菌 KCTC2226",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.58,
+   "Ks": 0.03,
+   "Yxs": 0.52,
+   "T_opt": 37.0,
+   "p_opt": 7.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "LB",
+    "TB_terrific"
+   ]
+  },
+  {
+   "strain_id": "lactobacillus_acidophilus_NCFM",
+   "genus": "Lactobacillus",
+   "species": "acidophilus",
+   "common_name": "嗜酸乳杆菌 NCFM",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.45,
+   "Ks": 0.05,
+   "Yxs": 0.12,
+   "T_opt": 37.0,
+   "p_opt": 5.5,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "MRS_broth"
+   ]
+  },
+  {
+   "strain_id": "lactobacillus_bulgaricus_136",
+   "genus": "Lactobacillus",
+   "species": "bulgaricus",
+   "common_name": "保加利亚乳杆菌",
+   "domain": "Bacteria",
+   "substrate": "lactose",
+   "mu_max": 0.62,
+   "Ks": 0.03,
+   "Yxs": 0.14,
+   "T_opt": 42.0,
+   "p_opt": 5.5,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "MRS_broth",
+    "Skim_milk"
+   ]
+  },
+  {
+   "strain_id": "lactobacillus_rhamnosus_GG",
+   "genus": "Lactobacillus",
+   "species": "rhamnosus",
+   "common_name": "鼠李糖乳杆菌 GG",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.55,
+   "Ks": 0.02,
+   "Yxs": 0.13,
+   "T_opt": 37.0,
+   "p_opt": 6.0,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "MRS_broth"
+   ]
+  },
+  {
+   "strain_id": "bacillus_subtilis_168",
+   "genus": "Bacillus",
+   "species": "subtilis",
+   "common_name": "枯草芽孢杆菌 168",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.72,
+   "Ks": 0.02,
+   "Yxs": 0.45,
+   "T_opt": 37.0,
+   "p_opt": 7.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "LB",
+    "Schaeffer_medium"
+   ]
+  },
+  {
+   "strain_id": "bacillus_coeleogens_A361",
+   "genus": "Bacillus",
+   "species": "coeruleus",
+   "common_name": "蓝色芽孢杆菌 A361",
+   "domain": "Bacteria",
+   "substrate": "starch",
+   "mu_max": 0.58,
+   "Ks": 0.5,
+   "Yxs": 0.4,
+   "T_opt": 40.0,
+   "p_opt": 7.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "Nutrient_broth",
+    "Cg_medium"
+   ]
+  },
+  {
+   "strain_id": "bacillus_thuringiensis_HD1",
+   "genus": "Bacillus",
+   "species": "thuringiensis",
+   "common_name": "苏云金芽孢杆菌",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.62,
+   "Ks": 0.02,
+   "Yxs": 0.4,
+   "T_opt": 30.0,
+   "p_opt": 7.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "LB",
+    "Tryptone_soja"
+   ]
+  },
+  {
+   "strain_id": "paeruginosa_PA01",
+   "genus": "Pseudomonas",
+   "species": "aeruginosa",
+   "common_name": "铜绿假单胞菌 PAO1",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.42,
+   "Ks": 0.05,
+   "Yxs": 0.45,
+   "T_opt": 37.0,
+   "p_opt": 7.0,
+   "aerobic": true,
+   "anaerobic_flexible": true,
+   "media": [
+    "LB",
+    "Pseudomonas_minimal"
+   ]
+  },
+  {
+   "strain_id": "pfluorescens_Pf5",
+   "genus": "Pseudomonas",
+   "species": "fluorescens",
+   "common_name": "荧光假单胞菌",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.45,
+   "Ks": 0.05,
+   "Yxs": 0.4,
+   "T_opt": 28.0,
+   "p_opt": 7.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "KingB_broth",
+    "Pseudomonas_minimal"
+   ]
+  },
+  {
+   "strain_id": "streptomyces_venezuelae_str",
+   "genus": "Streptomyces",
+   "species": "venezuelae",
+   "common_name": "委内瑞拉链霉菌",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.13,
+   "Ks": 0.02,
+   "Yxs": 0.2,
+   "T_opt": 28.0,
+   "p_opt": 7.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "MS_medium",
+    "Streptomyces_Broth"
+   ]
+  },
+  {
+   "strain_id": "streptomyces_avermitilis",
+   "genus": "Streptomyces",
+   "species": "avermitilis",
+   "common_name": "大环内酯链霉菌",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.12,
+   "Ks": 0.02,
+   "Yxs": 0.18,
+   "T_opt": 28.0,
+   "p_opt": 7.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "Streptomyces_medium"
+   ]
+  },
+  {
+   "strain_id": "streptococcus_thermophilus_LMD9",
+   "genus": "Streptococcus",
+   "species": "thermophilus",
+   "common_name": "嗜热链球菌",
+   "domain": "Bacteria",
+   "substrate": "lactose",
+   "mu_max": 0.78,
+   "Ks": 0.03,
+   "Yxs": 0.14,
+   "T_opt": 42.0,
+   "p_opt": 5.5,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "M17_broth",
+    "Skim_milk"
+   ]
+  },
+  {
+   "strain_id": "lactococcus_lactis_MG1363",
+   "genus": "Lactococcus",
+   "species": "lactis",
+   "common_name": "乳酸乳球菌 MG1363",
+   "domain": "Bacteria",
+   "substrate": "lactose",
+   "mu_max": 0.58,
+   "Ks": 0.3,
+   "Yxs": 0.08,
+   "T_opt": 30.0,
+   "p_opt": 6.5,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "GAM_broth",
+    "M17_broth"
+   ]
+  },
+  {
+   "strain_id": "ashaniazaia_Mutueri1",
+   "genus": "Aspergillus",
+   "species": "niger",
+   "common_name": "黑曲霉（工业产酸菌）",
+   "domain": "Bacteria",
+   "substrate": "sucrose",
+   "mu_max": 0.18,
+   "Ks": 0.1,
+   "Yxs": 0.12,
+   "T_opt": 37.0,
+   "p_opt": 5.5,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "Citric_acid_medium"
+   ]
+  },
+  {
+   "strain_id": "eudoraea_sp_2479_24",
+   "genus": "Eudoraea",
+   "species": "sp.",
+   "common_name": "固氮菌",
+   "domain": "Bacteria",
+   "substrate": "CO2_N2",
+   "mu_max": 0.15,
+   "Ks": 0.02,
+   "Yxs": 0.1,
+   "T_opt": 30.0,
+   "p_opt": 7.0,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "Nitrogen_free_medium"
+   ]
+  },
+  {
+   "strain_id": "pyrococcus_furiosus_DS2",
+   "genus": "Pyrococcus",
+   "species": "furiosus",
+   "common_name": "极速火球菌",
+   "domain": "Archaea",
+   "substrate": "glucose",
+   "mu_max": 0.5,
+   "Ks": 0.1,
+   "Yxs": 0.15,
+   "T_opt": 100.0,
+   "p_opt": 6.5,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "Pyrococcus_medium"
+   ]
+  },
+  {
+   "strain_id": "sulfolobus_acidocaldarius_DS1",
+   "genus": "Sulfolobus",
+   "species": "acidocaldarius",
+   "common_name": "嗜酸热硫化叶菌",
+   "domain": "Archaea",
+   "substrate": "thiosulfate",
+   "mu_max": 0.2,
+   "Ks": 0.5,
+   "Yxs": 0.08,
+   "T_opt": 78.0,
+   "p_opt": 3.0,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "Sulfolobus_medium"
+   ]
+  },
+  {
+   "strain_id": "thermus_thermophilus_HB8",
+   "genus": "Thermus",
+   "species": "thermophilus",
+   "common_name": "热水微球菌",
+   "domain": "Bacteria",
+   "substrate": "peptone",
+   "mu_max": 0.35,
+   "Ks": 0.2,
+   "Yxs": 0.2,
+   "T_opt": 65.0,
+   "p_opt": 7.0,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "TSB_thermophile"
+   ]
+  },
+  {
+   "strain_id": "mycobacterium_tuberculosis_H37Rv",
+   "genus": "Mycobacterium",
+   "species": "tuberculosis",
+   "common_name": "结核分枝杆菌",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.02,
+   "Ks": 0.1,
+   "Yxs": 0.3,
+   "T_opt": 37.0,
+   "p_opt": 6.5,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "Middlebrook_7H9",
+    "ODM_medium"
+   ]
+  },
+  {
+   "strain_id": "staphylococcus_aureus_COL",
+   "genus": "Staphylococcus",
+   "species": "aureus",
+   "common_name": "金黄色葡萄球菌",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.85,
+   "Ks": 0.02,
+   "Yxs": 0.35,
+   "T_opt": 37.0,
+   "p_opt": 7.0,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "TSA",
+    "BHI_broth"
+   ]
+  },
+  {
+   "strain_id": "salmonella_typhimurium_LT2",
+   "genus": "Salmonella",
+   "species": "enterica",
+   "common_name": "鼠伤寒沙门氏菌",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.82,
+   "Ks": 0.004,
+   "Yxs": 0.5,
+   "T_opt": 37.0,
+   "p_opt": 7.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "LB",
+    "M9_minimal"
+   ]
+  },
+  {
+   "strain_id": "campylobacter_jejuni_NCTC11168",
+   "genus": "Campylobacter",
+   "species": "jejuni",
+   "common_name": "空肠弯曲杆菌",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.35,
+   "Ks": 0.05,
+   "Yxs": 0.3,
+   "T_opt": 42.0,
+   "p_opt": 7.0,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "Campylobacter_blood_broth"
+   ]
+  },
+  {
+   "strain_id": "clostridium_difficile_630",
+   "genus": "Clostridium",
+   "species": "difficile",
+   "common_name": "艰难梭菌",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.18,
+   "Ks": 0.05,
+   "Yxs": 0.08,
+   "T_opt": 37.0,
+   "p_opt": 7.0,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "CDC_medium",
+    "BrHeart_infusion"
+   ]
+  },
+  {
+   "strain_id": "clostridium_botulinum_1507",
+   "genus": "Clostridium",
+   "species": "botulinum",
+   "common_name": "肉毒梭菌",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.15,
+   "Ks": 0.1,
+   "Yxs": 0.08,
+   "T_opt": 30.0,
+   "p_opt": 7.0,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "TSC_medium"
+   ]
+  },
+  {
+   "strain_id": "listeria_monocytogenes_F2365",
+   "genus": "Listeria",
+   "species": "monocytogenes",
+   "common_name": "单核细胞增生李斯特菌",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.8,
+   "Ks": 0.02,
+   "Yxs": 0.35,
+   "T_opt": 37.0,
+   "p_opt": 7.0,
+   "aerobic": null,
+   "anaerobic_flexible": true,
+   "media": [
+    "Brain_Heart_Infusion"
+   ]
+  },
+  {
+   "strain_id": "rhizobium_lipoaceticus_BM",
+   "genus": "Rhizobium",
+   "species": "leguminosarum",
+   "common_name": "豌豆根瘤菌",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.25,
+   "Ks": 0.1,
+   "Yxs": 0.4,
+   "T_opt": 25.0,
+   "p_opt": 7.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "TY_broth",
+    "Nitrogen_free_medium"
+   ]
+  },
+  {
+   "strain_id": "bradyrhizobium_japonicum_USDA110",
+   "genus": "Bradyrhizobium",
+   "species": "japonicum",
+   "common_name": "慢生大豆根瘤菌",
+   "domain": "Bacteria",
+   "substrate": "sucrose",
+   "mu_max": 0.1,
+   "Ks": 0.05,
+   "Yxs": 0.4,
+   "T_opt": 28.0,
+   "p_opt": 7.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "YNB_broth",
+    "Nitrogen_free"
+   ]
+  },
+  {
+   "strain_id": "synechocystis_sp_PCC6803",
+   "genus": "Synechocystis",
+   "species": "sp.",
+   "common_name": "集胞藻 PCC6803",
+   "domain": "Bacteria",
+   "substrate": "CO2_photosynthesis",
+   "mu_max": 0.05,
+   "Ks": 0.01,
+   "Yxs": 0.1,
+   "T_opt": 35.0,
+   "p_opt": 7.0,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "BG11_medium"
+   ]
+  },
+  {
+   "strain_id": "chlamydomonas_reinhardtii_CC124",
+   "genus": "Chlamydomonas",
+   "species": "reinhardtii",
+   "common_name": "莱茵衣藻",
+   "domain": "Eukarya",
+   "substrate": "CO2_photosynthesis",
+   "mu_max": 0.04,
+   "Ks": 0.01,
+   "Yxs": 0.12,
+   "T_opt": 25.0,
+   "p_opt": 7.0,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "TAP_medium",
+    "Tricine_medium"
+   ]
+  },
+  {
+   "strain_id": "methanosarcina_barkeri_Mstr7",
+   "genus": "Methanosarcina",
+   "species": "barkeri",
+   "common_name": "巴氏嗜甲烷菌",
+   "domain": "Archaea",
+   "substrate": "methane",
+   "mu_max": 0.12,
+   "Ks": 0.02,
+   "Yxs": 0.08,
+   "T_opt": 37.0,
+   "p_opt": 6.8,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "Methanobacterium_broth"
+   ]
+  },
+  {
+   "strain_id": "methanobacterium thermoautotrophicum_H1",
+   "genus": "Methanobacterium",
+   "species": "thermoautotrophicum",
+   "common_name": "热自养甲烷杆菌",
+   "domain": "Archaea",
+   "substrate": "H2_CO2",
+   "mu_max": 0.2,
+   "Ks": 0.01,
+   "Yxs": 0.05,
+   "T_opt": 60.0,
+   "p_opt": 7.0,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "Methanobacterium_broth"
+   ]
+  },
+  {
+   "strain_id": "schizosaccharomyces_pombe_972",
+   "genus": "Schizosaccharomyces",
+   "species": "pombe",
+   "common_name": "粟酒裂殖酵母",
+   "domain": "Eukarya",
+   "substrate": "glucose",
+   "mu_max": 0.25,
+   "Ks": 0.02,
+   "Yxs": 0.12,
+   "T_opt": 32.0,
+   "p_opt": 5.5,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "YPDA",
+    "YES_medium"
+   ]
+  },
+  {
+   "strain_id": "krhosotha_sp_C_1250_5B",
+   "genus": "Kluyveromyces",
+   "species": "lactis",
+   "common_name": "乳酸克鲁维酵母",
+   "domain": "Eukarya",
+   "substrate": "lactose",
+   "mu_max": 0.28,
+   "Ks": 0.1,
+   "Yxs": 0.1,
+   "T_opt": 30.0,
+   "p_opt": 5.5,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "YPDA",
+    "SKM_medium"
+   ]
+  },
+  {
+   "strain_id": "hanera_sp_KYK_5054",
+   "genus": "Hansenula",
+   "species": "polymorpha",
+   "common_name": "多形汉逊酵母",
+   "domain": "Eukarya",
+   "substrate": "glycerol",
+   "mu_max": 0.45,
+   "Ks": 0.05,
+   "Yxs": 0.15,
+   "T_opt": 28.0,
+   "p_opt": 5.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "BMGY",
+    "BMMY"
+   ]
+  },
+  {
+   "strain_id": "rhodobacter_sphaeroides_2.4.1",
+   "genus": "Rhodobacter",
+   "species": "sphaeroides",
+   "common_name": "球藻红菌",
+   "domain": "Bacteria",
+   "substrate": "CO2_photosynthesis",
+   "mu_max": 0.08,
+   "Ks": 0.01,
+   "Yxs": 0.15,
+   "T_opt": 30.0,
+   "p_opt": 7.0,
+   "aerobic": null,
+   "anaerobic_flexible": true,
+   "media": [
+    "Rhodobacter_broth"
+   ]
+  },
+  {
+   "strain_id": "halorhodospira_halophila_HB14",
+   "genus": "Halorhodospira",
+   "species": "halophila",
+   "common_name": "嗜盐红螺菌",
+   "domain": "Bacteria",
+   "substrate": "CO2_photosynthesis",
+   "mu_max": 0.06,
+   "Ks": 0.01,
+   "Yxs": 0.12,
+   "T_opt": 30.0,
+   "p_opt": 7.0,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "Halorhodospira_medium"
+   ]
+  },
+  {
+   "strain_id": "desulfovibrio_desulfuricans_NZ1",
+   "genus": "Desulfovibrio",
+   "species": "desulfuricus",
+   "common_name": "脱硫弧菌",
+   "domain": "Bacteria",
+   "substrate": "lactate",
+   "mu_max": 0.18,
+   "Ks": 0.05,
+   "Yxs": 0.1,
+   "T_opt": 37.0,
+   "p_opt": 7.0,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "Postgate_B_medium"
+   ]
+  },
+  {
+   "strain_id": "geobacter_metallireducens_HL",
+   "genus": "Geobacter",
+   "species": "metallireducens",
+   "common_name": "还原金属地杆菌",
+   "domain": "Bacteria",
+   "substrate": "acetate",
+   "mu_max": 0.08,
+   "Ks": 0.02,
+   "Yxs": 0.12,
+   "T_opt": 30.0,
+   "p_opt": 7.0,
+   "aerobic": null,
+   "anaerobic_flexible": null,
+   "media": [
+    "Geobacter_minimal"
+   ]
+  },
+  {
+   "strain_id": "shewanella_oneidensis_MR1",
+   "genus": "Shewanella",
+   "species": "oneidensis",
+   "common_name": "温和希瓦氏菌",
+   "domain": "Bacteria",
+   "substrate": "acetate",
+   "mu_max": 0.35,
+   "Ks": 0.02,
+   "Yxs": 0.4,
+   "T_opt": 25.0,
+   "p_opt": 7.0,
+   "aerobic": null,
+   "anaerobic_flexible": true,
+   "media": [
+    "LB",
+    "Shewanella_minimal"
+   ]
+  },
+  {
+   "strain_id": "pseudomonas_aeruginosa_PAO1_besides",
+   "genus": "Pseudomonas",
+   "species": "aeruginosa",
+   "common_name": "铜绿假单胞菌 PA14",
+   "domain": "Bacteria",
+   "substrate": "glucose",
+   "mu_max": 0.4,
+   "Ks": 0.05,
+   "Yxs": 0.45,
+   "T_opt": 37.0,
+   "p_opt": 7.0,
+   "aerobic": true,
+   "anaerobic_flexible": null,
+   "media": [
+    "LB",
+    "Pseudomonas_minimal"
+   ]
+  }
+ ]
+}
