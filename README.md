@@ -31,14 +31,17 @@ adjectives.
 
 | Skill | What it returns | Runs |
 |---|---|---|
-| [`virtual-experiment-design`](virtual-experiment-design/) | Ranked next-run conditions with 95% intervals | Online |
+| [`virtual-experiment-design`](virtual-experiment-design/) | Ranked next-run conditions with 95% intervals | Online or offline |
 | [`uq-coverage-audit`](uq-coverage-audit/) | PASS / MARGINAL / OVERCONFIDENT with the coverage gap | Offline |
 | [`ood-guard`](ood-guard/) | pass / controlled / reject per query point | Online or offline |
-| [`kinetic-model-selection`](kinetic-model-selection/) | Best-supported kinetic form with fitted parameters | Online |
-| [`fermentation-design`](fermentation-design/) | Full bioprocess design loop over 69 strains and 20 media | Online |
-| [`strain-media-selection`](strain-media-selection/) | Ranked hosts with µ_max, Ks, and matched media | Online |
+| [`kinetic-model-selection`](kinetic-model-selection/) | Best-supported kinetic form with fitted parameters | Online or offline |
+| [`fermentation-design`](fermentation-design/) | Full bioprocess design loop over 69 strains and 20 media | Online or offline |
+| [`strain-media-selection`](strain-media-selection/) | Ranked hosts with µ_max, Ks, and matched media | Online or offline |
 | [`paper-claim-validation`](paper-claim-validation/) | PASS / MARGINAL / UNVALIDATED with the supporting metric | Local reasoning |
 | [`mirror-run`](mirror-run/) | Sim-to-real gap and an MHS-ready command manifest | Online |
+
+Six of eight run without a network connection. Replacing an experiment is not
+supposed to depend on reaching a server.
 
 ## Install
 
@@ -110,7 +113,9 @@ carries no information.
 
 ## Validation
 
-Every skill is checked against the specification before release:
+Two different things get checked, and they are not interchangeable.
+
+**Conformance** — is the skill well-formed?
 
 ```bash
 python tests/validate_skills.py
@@ -120,6 +125,37 @@ Checks the closed set of six top-level frontmatter keys, `name` matching the
 directory, description length, `metadata` as a block mapping with a quoted
 version, `allowed-tools` as a string, the 500-line limit, and permitted
 directory entries. Exits non-zero on any violation, so it can gate CI.
+
+**Task-level evaluation** — does the skill get the right answer?
+
+```bash
+python tests/task_level/run_task_checks.py
+```
+
+This is the part that most skill collections do not have. The paper behind the
+largest scientific skill library states that it reports *"no task-level
+evaluation and no host selection rate"* — it measures how much context the
+documentation consumes, not whether the workflows work.
+
+These checks instead plant an answer and require the skill to find it:
+
+| Check | Planted truth | Required behaviour |
+|---|---|---|
+| `kinetics.recovers_planted_parameters` | Monod, µ_max 0.8, Ks 0.5 | selects Monod, µ_max within 20%, Ks within 50% |
+| `design.refuses_extrapolation` | query far outside every dimension | rejected, and **not** shortlisted with a score |
+| `design.emits_intervals` | any clean campaign data | every shortlisted row carries std > 0 and a 95% interval |
+| `strain.prefers_thermophile_at_60C` | operating at 60 °C | top-ranked host has T_opt ≥ 45 °C |
+| `uq.coverage_honest_on_clean_data` | clean sinusoidal signal | coverage ≥ 0.80, not flagged OVERCONFIDENT |
+
+```
+[PASS] kinetics.recovers_planted_parameters   Monod mu_max=0.7975 Ks=0.4897
+[PASS] design.refuses_extrapolation           rejected 1/1, no shortlist emitted
+[PASS] design.emits_intervals                 3 rows, e.g. 10.338..10.581
+[PASS] strain.prefers_thermophile_at_60C      Thermus thermophilus T_opt=65.0C
+[PASS] uq.coverage_honest_on_clean_data       verdict=PASS coverage=0.925
+```
+
+A skill that only reads well cannot pass these. Exits non-zero on any failure.
 
 ## API
 
