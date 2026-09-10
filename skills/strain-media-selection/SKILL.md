@@ -29,6 +29,25 @@ Triggers:
 Do **not** use this for ordering physical cultures, or as an authoritative
 biosafety classification.
 
+## Offline Mode (no network, no account)
+
+A 69-strain table ships with this skill, so screening works with no API:
+
+```bash
+python scripts/select_strain.py --temp 37 --ph 7.0 --substrate 5
+python scripts/select_strain.py --temp 60 --ph 6.5 --aerobic --top 5
+python scripts/select_strain.py --carbon-source glycerol --json
+python scripts/select_strain.py --list-substrates
+```
+
+Ranking uses the growth rate a strain can actually sustain at *your* operating
+point, not its catalogue maximum: µ_max is derated by a Gaussian temperature
+factor, a Gaussian pH factor, and a Monod term for the residual substrate you
+supply. At 60 °C a thermophile outranks every mesophile, which is the behaviour
+you want and the behaviour a raw µ_max sort would miss.
+
+Runs on the standard library alone. No numpy, no network.
+
 ## Workflow
 
 ### 1. Survey the database
