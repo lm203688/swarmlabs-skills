@@ -30,6 +30,29 @@ Triggers:
 Do **not** use for GMP batch release, equipment control, or regulatory
 submission. This is a design tool.
 
+## Offline Mode (no network, no account)
+
+The API is optional. With a CSV of past runs you can rank the next ones on your
+own machine — which is the point of replacing the bench rather than scheduling
+it:
+
+```bash
+python scripts/design_campaign.py runs.csv --top 5
+python scripts/design_campaign.py runs.csv --candidates grid.csv --top 5
+python scripts/design_campaign.py runs.csv --bounds "30,40;6,8;0.05,0.30" --json
+```
+
+`runs.csv` holds one run per row: condition columns first, objective last
+(e.g. `T,pH,feed_rate,titre`). A candidate file lists conditions only and may
+hold a single row.
+
+It prints a predicted value, a standard deviation, a 95% interval and an OOD
+verdict per shortlisted condition. Conditions outside the measured region are
+**withheld, not ranked** — a refused prediction is never reported as a low-
+confidence one.
+
+Requires `numpy`. Nothing else.
+
 ## Workflow
 
 ### 0. Start from the strain, not the parameter grid
