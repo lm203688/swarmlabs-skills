@@ -37,7 +37,7 @@ adjectives.
 | [`kinetic-model-selection`](kinetic-model-selection/) | Best-supported kinetic form with fitted parameters | Online or offline |
 | [`fermentation-design`](fermentation-design/) | Full bioprocess design loop over 69 strains and 20 media | Online or offline |
 | [`strain-media-selection`](strain-media-selection/) | Ranked hosts with µ_max, Ks, and matched media | Online or offline |
-| [`paper-claim-validation`](paper-claim-validation/) | PASS / MARGINAL / UNVALIDATED with the supporting metric | Local reasoning |
+| [`paper-claim-validation`](paper-claim-validation/) | PASS / MARGINAL / REFUTED / UNVALIDATED with the supporting metric | Offline |
 | [`mirror-run`](mirror-run/) | Sim-to-real gap and an MHS-ready command manifest | Online |
 
 Six of eight run without a network connection. Replacing an experiment is not
@@ -155,7 +155,28 @@ These checks instead plant an answer and require the skill to find it:
 [PASS] uq.coverage_honest_on_clean_data       verdict=PASS coverage=0.925
 ```
 
-A skill that only reads well cannot pass these. Exits non-zero on any failure.
+A skill that only reads well cannot pass these.
+
+One check needs the network (`virtual_design.ranks_candidates`). It reports
+`SKIP` rather than `FAIL` when the runner is offline, and skipped checks are
+excluded from the exit code — an air-gapped run is not a red build.
+
+## Continuous integration
+
+`.github/workflows/skills.yml` runs both suites on every change under
+`skills/`, and on `workflow_dispatch`. Current state: **green** — 8/8
+conformance, 9/9 task-level, 1 skipped.
+
+```bash
+# Reproduce the CI run locally
+python skills/agent-skills/tests/validate_skills.py
+python skills/agent-skills/tests/task_level/run_task_checks.py
+```
+
+Grades issued by `paper-claim-validation` are `PASS`, `MARGINAL`, `REFUTED`
+and `UNVALIDATED`. `REFUTED` exists because folding a refuted claim into
+`UNVALIDATED` would be a category error: `UNVALIDATED` means *we could not
+check*, whereas a refutation is the strongest result the skill produces.
 
 ## API
 
