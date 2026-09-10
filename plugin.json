@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "swarmlabs-skills",
+  "version": "1.0.0",
+  "description": "Agent Skills for replacing physical experiments with uncertainty-quantified virtual ones: campaign design, kinetics selection, strain screening, coverage audit and out-of-distribution refusal.",
+  "author": {
+    "name": "SwarmLabs",
+    "url": "https://swarmlabs.tools"
+  },
+  "homepage": "https://swarmlabs.tools",
+  "repository": "https://github.com/lm203688/swarmlabs",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "uncertainty-quantification",
+    "gaussian-process",
+    "virtual-experiment",
+    "surrogate-model",
+    "bioprocess",
+    "fermentation",
+    "kinetics",
+    "out-of-distribution",
+    "scientific-computing"
+  ]
+}
