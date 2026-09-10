@@ -28,6 +28,25 @@ Triggers:
 - A paper reports Monod parameters and someone wants to reuse them
 - Growth curves that peak and decline, or show a lag
 
+## Offline Mode (no network, no account)
+
+Fit all eight forms locally and let the numbers pick the winner:
+
+```bash
+python scripts/select_model.py data.csv
+python scripts/select_model.py data.csv --no-inhibition
+python scripts/select_model.py data.csv --json
+```
+
+`data.csv` holds one observation per row: substrate first, rate second. It
+reports R², RMSE and AIC per model, then selects by AIC — preferring the model
+with fewer parameters whenever R² ties within 0.005. Extra parameters have to
+earn their keep.
+
+The fitter is seeded, so the same data always yields the same ranking.
+
+Requires `numpy`. Nothing else.
+
 ## Workflow
 
 ### 1. Fit several candidates at once
