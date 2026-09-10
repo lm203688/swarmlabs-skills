@@ -8,7 +8,7 @@ metadata:
   version: "1.0"
   skill-author: SwarmLabs
   category: verification
-  grades: "PASS, MARGINAL, UNVALIDATED"
+  grades: "PASS, MARGINAL, REFUTED, UNVALIDATED"
   discipline: "no grade is issued without a computed coverage figure"
 ---
 
@@ -38,6 +38,37 @@ producing a PASS/FAIL badge without any computed quantity behind it.
 > **Rule: no grade without a number.**
 > Every grade must be accompanied by a computed correlation, coverage, or error
 > metric. If you cannot compute one, the grade is `UNVALIDATED`, and you say so.
+
+## Offline Mode (no network, no account)
+
+Grade a claim on your own machine. Three claim types are supported, and all
+three print the agreement figure and the coverage figure next to the grade:
+
+```bash
+# Value claim: "titre reaches 12.4 g/L at 37 C, pH 7"
+python scripts/grade_claim.py runs.csv --claim-value 12.4 --at "37,7.0"
+
+# Parameter claim: "mu_max = 0.81 /h", fitted with a named form
+python scripts/grade_claim.py kinetics.csv --claim-param mu_max \
+    --claim-value 0.81 --model monod
+
+# Model-form claim: "growth follows Monod"
+python scripts/grade_claim.py kinetics.csv --claim-model monod
+```
+
+`runs.csv` holds conditions first, target last. Parameter and model-form
+claims expect one condition column (substrate) and the rate as target.
+
+The grader **estimates the noise from leave-one-out residuals** and floors it
+at 3%. Fixing the noise at 3% regardless of the data would make every
+interval too thin and every audit report overconfidence — so the floor is a
+floor, not an assumption.
+
+It refuses to grade a claim at conditions outside the measured range rather
+than extrapolating. It also flags any grade from fewer than 15 points as
+PROVISIONAL, because coverage is unstable at that size.
+
+Requires `numpy`. Nothing else.
 
 ## Workflow
 
@@ -76,9 +107,20 @@ second number.
 
 | Grade | Criteria |
 |---|---|
-| `PASS` | Agreement high **and** coverage within ~0.05 of nominal |
-| `MARGINAL` | Agreement acceptable but coverage optimistic by 0.05–0.15, or agreement borderline |
+| `PASS` | Agreement high (R² ≥ 0.90) **and** coverage within ~0.05 of nominal **and** the claim sits inside the computed interval |
+| `MARGINAL` | Agreement acceptable (R² ≥ 0.70) but coverage off by 0.05–0.15, or the claim lands just outside the interval (within 3× its half-width) |
+| `REFUTED` | The claim is more than 3× the interval half-width from the prediction, or agreement/coverage fall outside the usable band |
 | `UNVALIDATED` | Data unavailable, claim ungradeable, or the check was not run |
+
+Report coverage **with its direction**. Coverage below nominal means the
+intervals are too narrow and the model is overconfident; coverage above
+nominal means they are wastefully wide. Calling both "optimistic" hides the
+one that actually puts you at risk.
+
+`REFUTED` is the grade the original three-way scheme was missing. Folding a
+refuted claim into `UNVALIDATED` is a category error: `UNVALIDATED` means
+*"we could not check"*, whereas a refutation is the strongest result this
+skill produces — we did check, and the claim does not hold here.
 
 A `MARGINAL` result is a **real finding**, not a soft pass. It means: the
 central claim holds, but do not reuse the uncertainty bounds.
